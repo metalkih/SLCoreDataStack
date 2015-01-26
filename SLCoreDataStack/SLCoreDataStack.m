@@ -135,8 +135,7 @@ NSString *const SLCoreDataStackErrorDomain = @"SLCoreDataStackErrorDomain";
 
 - (NSURL *)databaseRootURL
 {
-    return [[NSFileManager defaultManager] URLsForDirectory:NSLibraryDirectory
-                                                  inDomains:NSUserDomainMask].lastObject;
+    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
 - (NSURL *)dataStoreURL
