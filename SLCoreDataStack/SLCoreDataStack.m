@@ -291,7 +291,8 @@ NSString *const SLCoreDataStackErrorDomain = @"SLCoreDataStackErrorDomain";
 
         NSDictionary *options = @{
                                   NSMigratePersistentStoresAutomaticallyOption: @YES,
-                                  NSInferMappingModelAutomaticallyOption: @YES
+                                  NSInferMappingModelAutomaticallyOption: @YES,
+                                  NSSQLitePragmasOption:@{ @"journal_mode" : @"DELETE" }
                                   };
 
         NSError *error = nil;
